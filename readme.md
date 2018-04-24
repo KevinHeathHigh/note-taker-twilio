@@ -71,7 +71,25 @@ The `NOTE_TAKER_HOST` can be either a hostname or ip address.
 
 It is required that this app is accessable from the Twilio domain. Which means that the app needs to be on a public network.  This can be achieve locally by using a service like [_ngrok_](https://ngrok.com/).
 
- I have tried to run this in AWS Lambda using API Gateway, but the Google client libraries won't install in Lambda and I did not persue further
+Log into the [Twilio console](https://www.twilio.com/console) and select `All Products & Services` on the left hand side.
+
+![All Products & Services](./images/all_products_and_services.png)
+
+Then select `Phone Numbers`
+
+![Phone Numbers](./images/phone_numbers.png)
+
+Either select and existing phone number, or create a new number.  Make sure it has both **VOICE** and **SMS**
+
+ In the `VOICE & FAX` section add the URL to your app as a **Webhook** in the `A CALL COMES IN` input.  In the example I am using the aforementioned [_ngrok_](https://ngrok.com/).
+
+![A CALL COMES IN](./images/a_call_comes_in.png)
+
+Make sure the URL references the `/twilio` path.
+
+Save the configurataion.
+
+With the app running, call the number associated with this app.  You will want to call the App from an SMS enabled phone since the app will use the caller number to send the SMS.
 
 ## NOTES ##
 
