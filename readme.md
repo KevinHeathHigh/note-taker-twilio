@@ -13,7 +13,7 @@ Specifically things like shopping lists:
 
 In reality this app really evaluates different trascriptions services
 
-Currently Google, Deepgram and IBM Watson
+Currently Google and IBM Watson
 
 ## Requirements ##
 
@@ -33,7 +33,6 @@ Make sure you have appropriate credentials for the the following services
 
 * [Twilio](http://www.twilio.com)
 * [Google Cloud](https://cloud.google.com/speech-to-text)
-* [Deepgram](https://deepgram.com)
 * [IBM Watson](https://www.ibm.com/watson/services/speech-to-text)
 
 The following Envrionment variables are required for authentication
@@ -42,8 +41,6 @@ The following Envrionment variables are required for authentication
 |--- |
 |TWILIO_ACCOUNT_SID|
 |TWILIO_AUTH_TOKEN|
-|DEEPGRAM_ACCOUNT_SID|
-|DEEPGRAM_AUTH_TOKEN|
 |WATSON_USERNAME|
 |WATSON_PASSWORD|
 |GOOGLE_DEVELOPER_KEY|
@@ -107,3 +104,5 @@ Improvements:
 * Other Transcription?
 * Run as serverless _(I have tried to run this in AWS Lambda using API Gateway, but the Google client libraries won't install in Lambda and I did not persue further)_
 
+Deprcated:
+Deepgram no longer has an open API for developers and has been removed from this codebase.

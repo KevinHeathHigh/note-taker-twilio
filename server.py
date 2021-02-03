@@ -5,7 +5,6 @@ from flask import Flask, request, json, make_response
 from twilio.twiml.voice_response import VoiceResponse
 from twilio.rest import Client
 
-import deepgram_transcribe
 import watson_transcribe
 import google_transcribe
 
@@ -52,7 +51,6 @@ def twilio_recording():
     recording = get_twilio_recording(recording_url)
     
     #Get the transcription and send the SMS for each service (syncronous)
-    send_note_to_sms(deepgram_transcribe.deepgram_transcribe(recording))
     send_note_to_sms(watson_transcribe.watson_transcribe(recording))
     send_note_to_sms(google_transcribe.google_transcribe(recording))
     return make_response('OK', 203)
