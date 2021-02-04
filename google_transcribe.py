@@ -5,7 +5,7 @@ from google.cloud import speech
 from google.cloud.speech import enums
 from google.cloud.speech import types
 from oauth2client.service_account import ServiceAccountCredentials
-from apiclient.discovery import build
+from googleapiclient.discovery import build
 
 
 def google_transcribe(recording):

@@ -105,4 +105,4 @@ Improvements:
 * Run as serverless _(I have tried to run this in AWS Lambda using API Gateway, but the Google client libraries won't install in Lambda and I did not persue further)_
 
 Deprcated:
-Deepgram no longer has an open API for developers and has been removed from this codebase.
+* Deepgram no longer has an open API for developers and has been removed from this codebase.

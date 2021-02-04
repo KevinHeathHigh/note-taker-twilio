@@ -1,3 +1,4 @@
-authentication_exports.bat
+authentication_exports.*
 settings.json
 *.pyc
+.devcontainer

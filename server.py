@@ -93,6 +93,6 @@ def send_note_to_sms(message):
 if __name__ == "__main__":
     print("\n",10 * '*' + 'Note Taker' + 10 * '*')
     note_taker_host = os.environ.get("NOTE_TAKER_HOST", "localhost")
-    note_taker_port = int(os.environ.get("NOTE_TAKER_PORT", 8080))
+    note_taker_port = int(os.environ.get("NOTE_TAKER_PORT", 3088))
     app.run(host=note_taker_host, port=note_taker_port, debug=True)
     
